@@ -1,0 +1,40 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.SnFileManager" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/main_color</item>
+        <item name="colorPrimaryVariant">@color/soft_blue</item>
+        <item name="colorOnPrimary">@color/first_text_color</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/main_color</item>
+        <item name="colorSecondaryVariant">@color/soft_blue</item>
+        <item name="colorOnSecondary">@color/first_text_color</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/bg_color</item>
+        <item name="android:windowBackground">@color/bg_color</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/bg_color</item>
+
+        <!-- Customize your theme here. -->
+        <item name="bottomSheetDialogTheme">@style/CustomBottomSheetDialog</item>
+        <item name="autoCompleteTextViewStyle">@style/cursorColor</item>
+
+        <item name="android:actionOverflowButtonStyle">@style/MyOverflowButtonStyle</item>
+        <item name="android:textColorPrimary">@color/first_text_color</item>
+        <item name="android:actionModeStyle">@style/Base.Widget.AppCompat.ActionMode</item>
+    </style>
+
+    <style name="Theme.Material3.DayNight.NoActionBa">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionModeOverlay">true</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize20Percent" parent="">
+        <item name="cornerSize">18%</item>
+    </style>
+
+</resources>

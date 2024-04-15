@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_color"
+        tools:context=".feature.home.HomeFragment">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_color"
+            app:liftOnScroll="true"
+            android:paddingHorizontal="@dimen/_15sdp"
+            app:liftOnScrollColor="@null">
+
+
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="@string/your_files"
+                app:titleTextColor="@color/first_text_color" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <GridLayout
+                    android:id="@+id/cv_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/ib_images"
+                        android:layout_width="159dp"
+                        android:layout_height="68dp"
+                        app:cardCornerRadius="16dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:layout_marginBottom="@dimen/_16sdp"
+                        android:backgroundTint="@color/cardView_color"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:src="@drawable/ic_image_category"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:id="@+id/ivImage"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_marginStart="10dp"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tvImageName"
+                                android:text="@string/images"
+                                android:textSize="14sp"
+                                android:layout_marginBottom="12dp"
+                                android:layout_marginStart="8dp"
+                                android:textColor="@color/white"
+                                app:layout_constraintTop_toTopOf="@+id/ivImage"
+                                app:layout_constraintStart_toEndOf="@+id/ivImage"
+                                app:layout_constraintBottom_toBottomOf="@+id/ivImage" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tvImageCount"
+                                tools:text="132 files"
+                                android:textSize="10sp"
+                                android:textColor="@color/white"
+                                app:layout_constraintTop_toBottomOf="@+id/tvImageName"
+                                app:layout_constraintStart_toStartOf="@+id/tvImageName" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/ib_sounds"
+                        android:layout_width="159dp"
+                        android:layout_height="68dp"
+                        app:cardCornerRadius="16dp"
+                        style="@style/CardView"
+                        android:layout_gravity=""
+                        android:backgroundTint="@color/cardView_color"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:src="@drawable/ic_audios_category"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:id="@+id/ivAudio"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_marginStart="10dp"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tvAudioName"
+                                android:text="@string/sounds"
+                                android:textSize="14sp"
+                                android:layout_marginBottom="12dp"
+                                android:layout_marginStart="8dp"
+                                android:textColor="@color/white"
+                                app:layout_constraintTop_toTopOf="@+id/ivAudio"
+                                app:layout_constraintStart_toEndOf="@+id/ivAudio"
+                                app:layout_constraintBottom_toBottomOf="@+id/ivAudio" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tvAudioCount"
+                                tools:text="132 files"
+                                android:textSize="10sp"
+                                android:textColor="@color/white"
+                                app:layout_constraintTop_toBottomOf="@+id/tvAudioName"
+                                app:layout_constraintStart_toStartOf="@+id/tvAudioName" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/ib_videos"
+                        android:layout_width="159dp"
+                        android:layout_height="68dp"
+                        app:cardCornerRadius="16dp"
+                        style="@style/CardView"
+                        android:layout_marginBottom="@dimen/_16sdp"
+                        android:backgroundTint="@color/cardView_color"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:src="@drawable/ic_videos_category"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:id="@+id/ivVideos"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_marginStart="10dp"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tvVideosName"
+                                android:text="@string/videos"
+                                android:textSize="14sp"
+                                android:layout_marginBottom="12dp"
+                                android:layout_marginStart="8dp"
+                                android:textColor="@color/white"
+                                app:layout_constraintTop_toTopOf="@+id/ivVideos"
+                                app:layout_constraintStart_toEndOf="@+id/ivVideos"
+                                app:layout_constraintBottom_toBottomOf="@+id/ivVideos" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tvVideosCount"
+                                tools:text="132 files"
+                                android:textSize="10sp"
+                                android:textColor="@color/white"
+                                app:layout_constraintTop_toBottomOf="@+id/tvVideosName"
+                                app:layout_constraintStart_toStartOf="@+id/tvVideosName" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/ib_archives"
+                        android:layout_width="159dp"
+                        android:layout_height="68dp"
+                        app:cardCornerRadius="16dp"
+                        style="@style/CardView"
+                        android:backgroundTint="@color/cardView_color"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:src="@drawable/ic_downloads_category"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:id="@+id/ivDownloads"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_marginStart="10dp"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tvDownloadName"
+                                android:text="@string/downloads"
+                                android:textSize="14sp"
+                                android:layout_marginBottom="12dp"
+                                android:layout_marginStart="8dp"
+                                android:textColor="@color/white"
+                                app:layout_constraintTop_toTopOf="@+id/ivDownloads"
+                                app:layout_constraintStart_toEndOf="@+id/ivDownloads"
+                                app:layout_constraintBottom_toBottomOf="@+id/ivDownloads" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tvDownloadCount"
+                                tools:text="132 files"
+                                android:textSize="10sp"
+                                android:textColor="@color/white"
+                                app:layout_constraintTop_toBottomOf="@+id/tvDownloadName"
+                                app:layout_constraintStart_toStartOf="@+id/tvDownloadName" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/ib_apks"
+                        android:layout_width="159dp"
+                        android:layout_height="68dp"
+                        app:cardCornerRadius="16dp"
+                        style="@style/CardView"
+                        android:backgroundTint="@color/cardView_color"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:src="@drawable/ic_apk_category"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:id="@+id/ivApk"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_marginStart="10dp"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tvApkName"
+                                android:text="@string/apk_files"
+                                android:textSize="14sp"
+                                android:layout_marginBottom="12dp"
+                                android:layout_marginStart="8dp"
+                                android:textColor="@color/white"
+                                app:layout_constraintTop_toTopOf="@+id/ivApk"
+                                app:layout_constraintStart_toEndOf="@+id/ivApk"
+                                app:layout_constraintBottom_toBottomOf="@+id/ivApk" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tvApkCount"
+                                tools:text="132 files"
+                                android:textSize="10sp"
+                                android:textColor="@color/white"
+                                app:layout_constraintTop_toBottomOf="@+id/tvApkName"
+                                app:layout_constraintStart_toStartOf="@+id/tvApkName" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/ib_documents"
+                        android:layout_width="159dp"
+                        android:layout_height="68dp"
+                        app:cardCornerRadius="16dp"
+                        style="@style/CardView"
+                        android:backgroundTint="@color/cardView_color"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:src="@drawable/ic_documents_category"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:id="@+id/ivDocuments"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:layout_marginStart="10dp"
+                                app:layout_constraintBottom_toBottomOf="parent" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tvDocumentsName"
+                                android:text="@string/documents"
+                                android:textSize="14sp"
+                                android:layout_marginBottom="12dp"
+                                android:layout_marginStart="8dp"
+                                android:textColor="@color/white"
+                                app:layout_constraintTop_toTopOf="@+id/ivDocuments"
+                                app:layout_constraintStart_toEndOf="@+id/ivDocuments"
+                                app:layout_constraintBottom_toBottomOf="@+id/ivDocuments" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tvDocumentsCount"
+                                tools:text="132 files"
+                                android:textSize="10sp"
+                                android:textColor="@color/white"
+                                app:layout_constraintTop_toBottomOf="@+id/tvDocumentsName"
+                                app:layout_constraintStart_toStartOf="@+id/tvDocumentsName" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </GridLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_color"
+                    android:paddingHorizontal="@dimen/_20sdp"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_categories"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/storage"
+                        android:textColor="@color/first_text_color"
+                        android:textSize="@dimen/_13ssp" />
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_categories"
+                        app:layout_constraintStart_toStartOf="@+id/tv_categories"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_categories"
+                        android:id="@+id/btn_file"
+                        android:layout_marginHorizontal="@dimen/_8sdp"
+                        app:cardBackgroundColor="@color/storage_color"
+                        app:cardCornerRadius="16dp"
+                        android:layout_marginTop="24dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:src="@drawable/ic_internal_storage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/ivInternalStorage"
+                                android:layout_margin="12dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:tint="@color/white" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tvintName"
+                                android:text="@string/internal_storage"
+                                android:textSize="14sp"
+                                android:textColor="@color/white"
+                                android:elegantTextHeight="false"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/ivInternalStorage"
+                                app:layout_constraintHorizontal_bias="0.12"
+                                app:layout_constraintStart_toEndOf="@+id/ivInternalStorage"
+                                android:layout_marginStart="8dp" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tv_space_of"
+                                android:text="34GB / 128GB"
+                                android:textSize="10sp"
+                                android:layout_margin="2dp"
+                                android:layout_marginTop="3dp"
+                                android:textColor="@color/white"
+                                android:elegantTextHeight="false"
+                                app:layout_constraintTop_toBottomOf="@+id/tvintName"
+                                app:layout_constraintStart_toStartOf="@+id/tvintName" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tv_space_free"
+                                android:text="Free space:224GB"
+                                android:textSize="10sp"
+                                android:textColor="@color/white"
+                                android:elegantTextHeight="false"
+                                android:layout_margin="15dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:layout_marginTop="12dp"
+                                app:layout_constraintTop_toBottomOf="@+id/pb_space"
+                                app:layout_constraintEnd_toEndOf="parent" />
+
+                            <com.google.android.material.progressindicator.LinearProgressIndicator
+                                android:layout_width="0dp"
+                                android:layout_height="14dp"
+                                android:progress="50"
+                                app:trackCornerRadius="7dp"
+                                android:max="100"
+                                app:trackColor="#14FFFFFF"
+                                app:indicatorSize="100dp"
+                                app:indicatorColor="#5D8AFF"
+                                app:trackThickness="14dp"
+                                android:id="@+id/pb_space"
+                                android:layout_marginTop="20dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_space_of"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginStart="8dp" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/btnExternalFile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/storage_color"
+                        app:cardCornerRadius="16dp"
+                        android:visibility="visible"
+                        android:layout_marginHorizontal="@dimen/_8sdp"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintStart_toStartOf="@id/cInternalStorage"
+                        app:layout_constraintEnd_toEndOf="@id/cInternalStorage"
+                        app:layout_constraintTop_toBottomOf="@+id/cInternalStorage">
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="12dp">
+
+
+                            <ImageView
+                                android:src="@drawable/ic_external_storage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/ivExternalStorage"
+                                android:layout_margin="12dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:tint="@color/white" />
+
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tvExternalStorage"
+                                android:text="Flash Drive"
+                                android:textSize="14sp"
+                                android:layout_marginBottom="12dp"
+                                android:textColor="@color/white"
+                                android:elegantTextHeight="false"
+                                app:layout_constraintTop_toTopOf="@+id/ivExternalStorage"
+                                app:layout_constraintHorizontal_bias="0.12"
+                                app:layout_constraintStart_toEndOf="@+id/ivExternalStorage"
+                                android:layout_marginStart="8dp"
+                                app:layout_constraintBottom_toBottomOf="@+id/ivExternalStorage"
+                                app:layout_constraintEnd_toStartOf="@+id/ivOption" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/tv_space_of_external"
+                                tools:text="34GB / 128GB"
+                                android:textSize="10sp"
+                                android:layout_margin="2dp"
+                                android:layout_marginTop="3dp"
+                                android:textColor="@color/white"
+                                android:elegantTextHeight="false"
+                                app:layout_constraintTop_toBottomOf="@+id/tvExternalStorage"
+                                app:layout_constraintStart_toStartOf="@+id/tvExternalStorage" />
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:id="@+id/ivOption"
+                                android:padding="7dp"
+                                app:tint="@color/light_grey"
+                                android:src="@drawable/ic_more_option"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tv_Recents"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:padding="@dimen/_10sdp"
+                            android:text="@string/recent_files"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_13ssp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.5" />
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/btnViewAll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:padding="@dimen/_10sdp"
+                            android:text="See all"
+                            android:textColor="@color/light_blue"
+                            android:textSize="@dimen/_13ssp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.5" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/recent_image_item"
+                        android:id="@+id/recy_recents_images"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="38dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/btnExternalFile"
+                        app:layout_constraintVertical_bias="1.0" />
+
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cv_other"
+                        style="@style/Widget.MaterialFiles.CardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginVertical="@dimen/_10sdp"
+                        app:layout_constraintTop_toBottomOf="@+id/cv_storage_card">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/bg_color"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tv_other"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:fontFamily="@font/adamina"
+                                android:padding="@dimen/_10sdp"
+                                android:text="@string/other"
+                                android:textColor="@color/first_text_color"
+                                android:textSize="@dimen/_13ssp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/cv_external_storage_card" />
+
+                            <com.sn.snfilemanager.view.component.HrImageButton
+                                android:id="@+id/btn_settings"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:padding="@dimen/_10sdp"
+                                app:icon="@drawable/ic_settings"
+                                app:subTitle="@string/settings_desc"
+                                app:title="@string/settings" />
+
+                            <com.sn.snfilemanager.view.component.HrImageButton
+                                android:id="@+id/btn_about"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:padding="@dimen/_10sdp"
+                                app:icon="@drawable/ic_about"
+                                app:subTitle="@string/about_desc"
+                                app:title="@string/about" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</layout>

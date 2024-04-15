@@ -1,0 +1,7 @@
+<!-- custom_radio_button.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Checked state -->
+    <item android:drawable="@drawable/ic_radio_button_checked" android:state_checked="true"/>
+    <!-- Unchecked state -->
+    <item android:drawable="@drawable/ic_radio_button_unchecked"/>
+</selector>

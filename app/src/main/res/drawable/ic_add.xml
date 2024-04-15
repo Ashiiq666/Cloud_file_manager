@@ -1,0 +1,16 @@
+<!--
+  ~ Copyright (c)  2024  Juan Nascimento
+  ~ Part of FileManagerSphere - ic_add.xml
+  ~ SPDX-License-Identifier: GPL-3.0-or-later
+  ~ More details at: https://www.gnu.org/licenses/
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="22dp"
+    android:height="22dp"
+    android:viewportWidth="22"
+    android:viewportHeight="22">
+    <path
+        android:pathData="M12.571,1.571C12.571,0.704 11.868,0 11,0C10.132,0 9.429,0.704 9.429,1.571V9.429H1.571C0.704,9.429 0,10.132 0,11C0,11.868 0.704,12.571 1.571,12.571H9.429V20.429C9.429,21.296 10.132,22 11,22C11.868,22 12.571,21.296 12.571,20.429V12.571H20.429C21.296,12.571 22,11.868 22,11C22,10.132 21.296,9.429 20.429,9.429H12.571V1.571Z"
+        android:fillColor="@color/white"/>
+</vector>
